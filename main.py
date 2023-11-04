@@ -1900,7 +1900,7 @@ if __name__ == "__main__":
                 broken_urls.append(line.rstrip())
 
     # create class_hds.json if it doesn't exist
-    if os.path.exists(os.path.join(datapath, "class_hds.json")) == False:
+    if not os.path.exists(os.path.join(datapath, "class_hds.json")):
         print("Couldn't find existing class_hds.json, creating new one...")
         with open(os.path.join(datapath, "class_hds.json"), 'w') as fp:
             json.dump({}, fp)
